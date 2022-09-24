@@ -11,11 +11,13 @@ boolean akey, dkey, skey, wkey, enterkey;
 
 //palette variables
 color black = #000000;
+color darkBlue = #2675B4;
+color brown = #A27A14;
 color purple = #490A3D;
 color pink = #BD1550;
 color orange = #E97F02;
 color yellow = #F8CA00;
-//color green = #8A9BOF;
+color grey = (175);
 color white = #FFFFFF;
 
 // SETUP
@@ -24,7 +26,7 @@ color white = #FFFFFF;
 void setup() {
   textAlign(CENTER, CENTER);
   size(1920,1080);
-  Player = new Player();
+  Player player1 = new Player();
   mode = 1;
 }
 
