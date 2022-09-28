@@ -32,7 +32,7 @@ void theGame() {
 
 void mousePressed()                              //Runs whenever the mouse is pressed
 {
-  if (dist(mouseX, mouseY, xPos, 200) <= 20)      //Did we hit the target?
+  if (dist(mouseX, mouseY, xPos, yPos) <= 15)      //Did we hit the target?
   {
     score = score + speed;                           //Increase the speed
     speed = speed + 1;                               //Increase the Score

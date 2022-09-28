@@ -2,10 +2,11 @@
 // ================================================================================================================================
 
 public int xPos;
+public int yPos;
 public int speed = 1;
-public int xDir = 1;
+public int xDir = 1;      //Increase this for a higher speed
 public int score = 0;
-public int lives = 5;
+public int lives = 6;
 public boolean lost = false;
 
 
@@ -29,12 +30,14 @@ public color green = #00FF00;
 // ================================================================================================================================
 
 void setup() {
+  frameRate = 10;
   textAlign(CENTER, CENTER);
   size(1920,1080);
   smooth();
   
   savedTime = millis();
   xPos = width/2;
+  yPos = height/2;
   mode = 1;
 }
 
