@@ -1,24 +1,29 @@
 // VARIABLES
 // ================================================================================================================================
 
-int mode; //1: Intro screen, 2: game, 3: game over screen
-int INTRO = 1;
-int GAME = 2;
-int GAMEOVER = 3;
+public int xPos;
+public int speed = 1;
+public int xDir = 1;
+public int score = 0;
+public int lives = 5;
+public boolean lost = false;
 
-//keyboard variables
-boolean akey, dkey, skey, wkey, enterkey;
 
-//palette variables
-color black = #000000;
-color darkBlue = #2675B4;
-color brown = #A27A14;
-color purple = #490A3D;
-color pink = #BD1550;
-color orange = #E97F02;
-color yellow = #F8CA00;
-color grey = (175);
-color white = #FFFFFF;
+//1: Intro screen, 2: game, 3: game over screen (click to reset)
+public int mode; 
+public int INTRO = 1;
+public int GAME = 2;
+public int GAMEOVER = 3;
+
+//color palette variables
+public color black = #000000;
+public color purple = #490A3D;
+public color pink = #BD1550;
+public color yellow = #F8CA00;
+public color grey = (175);
+public color white = #FFFFFF;
+public color red = #FF0000;
+public color green = #00FF00;
 
 // SETUP
 // ================================================================================================================================
@@ -26,7 +31,10 @@ color white = #FFFFFF;
 void setup() {
   textAlign(CENTER, CENTER);
   size(1920,1080);
-  Player player1 = new Player();
+  smooth();
+  
+  savedTime = millis();
+  xPos = width/2;
   mode = 1;
 }
 
